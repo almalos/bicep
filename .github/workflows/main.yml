@@ -6,6 +6,7 @@ on:
 
 jobs:
   Bicep:
+    environment: bicep
     runs-on: ubuntu-latest
     permissions:
       id-token: write
