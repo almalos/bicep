@@ -1,0 +1,35 @@
+name: aib
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  MG:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+    steps:
+      - name: Checkout Management Groups
+        uses: actions/checkout@v3
+        with:
+          repository: almalos/bicep
+          ref: main
+          path: bicep
+        
+      - name: Azure Login
+        uses: azure/login@v1
+        with:
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+          enable-azpssession: true
+          
+      # - name: Create Azure Image Builder
+      #   uses: azure/arm-deploy@v1
+      #   with:
+      #     scope: subscription
+      #     region: westeurope
+      #     template: bicep/aib.bicep
+      #     parameters: parameters/aib.parameters.json
