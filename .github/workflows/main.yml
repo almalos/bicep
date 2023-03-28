@@ -36,7 +36,7 @@ jobs:
       - name: Create Azure KeyVault
         uses: azure/arm-deploy@v1
         with:
-          scope: resourcegroup
+          scope: subscription
           region: westeurope
-          template: bicep/KeyVault.bicep
+          template: bicep/main.bicep
       #     parameters: parameters/aib.parameters.json
