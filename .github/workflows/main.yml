@@ -38,5 +38,5 @@ jobs:
         with:
           scope: subscription
           region: westeurope
-          template: main.bicep
+          template: bicep/bicep/main.bicep
       #     parameters: parameters/aib.parameters.json
