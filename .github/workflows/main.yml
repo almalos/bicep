@@ -1,4 +1,4 @@
-name: aib
+name: KeyVault
 on:
   push:
     branches: [main]
@@ -38,5 +38,5 @@ jobs:
         with:
           scope: subscription
           region: westeurope
-          template: bicep/main.bicep
+          template: main.bicep
       #     parameters: parameters/aib.parameters.json

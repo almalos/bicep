@@ -14,5 +14,6 @@ module kv 'KeyVault.bicep' = {
   params: {
     secretName: 'topsecret'
     secretValue: 'abcd'
+    location: location
   }
 }
