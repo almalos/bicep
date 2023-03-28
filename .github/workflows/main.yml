@@ -12,7 +12,7 @@ jobs:
       id-token: write
       contents: read
     steps:
-      - name: Checkout Bcep repo
+      - name: Checkout Bicep repo
         uses: actions/checkout@v3
         with:
           repository: almalos/bicep
@@ -27,16 +27,16 @@ jobs:
           subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
           enable-azpssession: true
 
-      - name: 'Run Azure CLI commands'
-        run: |
-          az account show
-          az group list
-          pwd
+      # - name: 'Run Azure CLI commands'
+      #   run: |
+      #     az account show
+      #     az group list
+      #     pwd
 
-      # - name: Create Azure Image Builder
-      #   uses: azure/arm-deploy@v1
-      #   with:
-      #     scope: subscription
-      #     region: westeurope
-      #     template: bicep/aib.bicep
+      - name: Create Azure KeyVault
+        uses: azure/arm-deploy@v1
+        with:
+          scope: resourcegroup
+          region: westeurope
+          template: bicep/KeyVault.bicep
       #     parameters: parameters/aib.parameters.json
