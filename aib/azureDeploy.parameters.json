@@ -39,10 +39,10 @@
         "value": 127
       },
       "OptimizeOsScriptURI": {
-        "value": "https://raw.githubusercontent.com/rohanislam2/rohanlab-azureImageBuilder/main/scripts/OptimizeOS.ps1"
+        "value": "https://raw.githubusercontent.com/almalos/bicep/main/aib/scripts/OptimizeOS.ps1"
       },
       "CustomAppsURI": {
-        "value": ""
+        "value": "https://raw.githubusercontent.com/almalos/bicep/main/aib/scripts/CustomApps.ps1"
       }
     }
   }
