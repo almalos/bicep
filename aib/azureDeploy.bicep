@@ -36,7 +36,7 @@ module identity './modules/identity.bicep' = {
 
 //Assign RBAC to the user assigned managed identity
 module rbac './modules/rbac.bicep' = {
-  name: 'rabcDeployment'
+  name: 'rbacDeployment'
   scope: rg    
   params: {
     identityName: identityName
