@@ -43,6 +43,4 @@ jobs:
       - name: Build & Capture Image
         shell: pwsh
         run: | 
-          Install-module az.imagebuilder -Force
-          Import-module az.imagebuilder
-          Start-AzImageBuilderTemplate -ResourceGroupName rg-avdimage -Name avd10ImageTemplate01 -NoWait
+          ./aib/scripts/buildCapture.ps1
