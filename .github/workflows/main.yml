@@ -17,7 +17,6 @@ jobs:
         with:
           repository: almalos/bicep
           ref: main
-          path: bicep
         
       - name: 'Azure CLI Login'
         uses: azure/login@v1
@@ -38,5 +37,5 @@ jobs:
         with:
           scope: subscription
           region: westeurope
-          template: bicep/bicep/main.bicep
+          template: bicep/main.bicep
       #     parameters: parameters/aib.parameters.json
