@@ -43,4 +43,4 @@ jobs:
       - name: Build & Capture Image
         shell: pwsh
         run: | 
-          ./scripts/buildCapture.ps1
+          ./aib/scripts/buildCapture.ps1
