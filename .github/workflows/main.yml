@@ -7,7 +7,7 @@ on:
 jobs:
   Bicep:
     # environment: bicep
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     permissions:
       id-token: write
       contents: read
@@ -43,4 +43,6 @@ jobs:
       - name: Build & Capture Image
         shell: pwsh
         run: | 
+          install-module az.imagebuilder
+          import-module az.imagebuilder
           Start-AzImageBuilderTemplate -ResourceGroupName rg-avdimage -Name avd10ImageTemplate02 -NoWait
