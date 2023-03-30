@@ -39,3 +39,8 @@ jobs:
           region: westeurope
           template: aib/azureDeploy.bicep
           parameters: aib/azureDeploy.parameters.json
+
+      - name: Build & Capture Image
+        shell: pwsh
+        run: | 
+          ./scripts/buildCapture.ps1
