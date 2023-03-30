@@ -1,4 +1,4 @@
-name: KeyVault
+name: AIB
 on:
   push:
     branches: [main]
